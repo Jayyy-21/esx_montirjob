@@ -311,3 +311,4 @@ ESX.RegisterServerCallback('esx_montirjob:getPlayerInventory', function(source, 
 
 	cb({items = items})
 end)
+df
