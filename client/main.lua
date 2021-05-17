@@ -82,7 +82,7 @@ function OpenMontirActionsMenu()
 	ESX.UI.Menu.CloseAll()
 
 	ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'montir_actions', {
-		title    = _U('montor'),
+		title    = _U('montir'),
 		align    = 'top-left',
 		elements = elements
 	}, function(data, menu)
@@ -152,7 +152,7 @@ function OpenMontirActionsMenu()
 							else
 								ESX.ShowNotification(_U('service_full') .. inServiceCount .. '/' .. maxInService)
 							end
-						end, 'monttir')
+						end, 'montir')
 					end
 
 					menu.close()
@@ -708,7 +708,7 @@ AddEventHandler('esx_montirjob:hasEnteredMarker', function(zone)
 
 	elseif zone =='VehicleDelivery' then
 		NPCTargetDeleterZone = true
-	elseif zone == 'montirActions' then
+	elseif zone == 'MontirActions' then
 		CurrentAction     = 'montir_actions_menu'
 		CurrentActionMsg  = _U('open_actions')
 		CurrentActionData = {}
@@ -938,7 +938,7 @@ Citizen.CreateThread(function()
 					OpenMontirActionsMenu()
 				elseif CurrentAction == 'montir_harvest_menu' then
 					OpenMontirHarvestMenu()
-				elseif CurrentAction == 'montir_craft_menu' then
+				elseif CurrentAction == 'montirc_craft_menu' then
 					OpenMontirCraftMenu()
 				elseif CurrentAction == 'delete_vehicle' then
 
